@@ -20,6 +20,7 @@
 		"test": "npm run test:unit -- --run",
 		"db:start": "docker compose up",
 		"db:init": "node --env-file-if-exists=.env scripts/db-init.ts",
+		"scrape": "tsx --env-file-if-exists=.env scripts/scrape.ts",
 		"db:push": "drizzle-kit push",
 		"db:generate": "drizzle-kit generate",
 		"db:migrate": "drizzle-kit migrate",
@@ -45,6 +46,7 @@
 		"svelte": "^5.57.1",
 		"svelte-check": "^4.6.0",
 		"tailwindcss": "^4.3.0",
+		"tsx": "^4.23.15",
 		"typescript": "^6.0.3",
 		"typescript-eslint": "^8.60.1",
 		"vite": "^8.3.0",
@@ -57,7 +59,9 @@
 	"dependencies": {
 		"@neon/config": "^1.9.2",
 		"@neon/env": "^1.6.3",
+		"cheerio": "^1.2.0",
 		"drizzle-orm": "^0.45.4",
+		"node-cron": "^4.6.0",
 		"pg": "^8.23.1"
 	}
 }
